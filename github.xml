@@ -1,0 +1,7 @@
+<application>
+  <component name="GithubAccounts">
+    <account id="873f1945-a13b-4bfb-9f52-1cbe1fc357ca" name="half-code">
+      <server host="github.com" />
+    </account>
+  </component>
+</application>

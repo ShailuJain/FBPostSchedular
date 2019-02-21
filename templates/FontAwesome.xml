@@ -1,0 +1,8 @@
+<templateSet group="FontAwesome">
+  <template name="fa-trash" value="&lt;i class=&quot;fa fa-trash&quot;&gt;&lt;/i&gt;$END$" description="fa-trash icon" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GSP" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+</templateSet>
