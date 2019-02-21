@@ -8,8 +8,8 @@
         <h3>Post Scheduler</h3>
         <div class="form-control">
             <label for="time" class="input-label">Time interval(Hours): </label><br>
-            <input type="number" id="time" class="input-type">
+            <input type="number" id="time" class="input-type" name="time_interval">
         </div>
-        <button type="submit" class="btn">Set Interval</button>
+        <button type="submit" class="btn" name="schedule_btn">Schedule</button>
     </form>
 </div>
