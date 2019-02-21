@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c9720c-a7f5-4a9f-b4da-22410982cc5e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../FBPostScheduler/includes/connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FBPostScheduler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FBPostScheduler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FBPostScheduler/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FBPostScheduler/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FBPostScheduler/includes/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/../FBPostScheduler/includes/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FBPostScheduler/includes/schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/../FBPostScheduler/includes/schedule.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FBPostScheduler/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../FBPostScheduler/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FBPostScheduler/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FBPostScheduler/js/script.js" afterDir="false" />
@@ -21,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../FBPostScheduler/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="600">
+              <caret line="47" column="81" lean-forward="true" selection-start-line="47" selection-start-column="81" selection-end-line="47" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -31,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/../FBPostScheduler/includes/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="81" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="81" />
+              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
               <folding>
                 <element signature="e#10#92#0#PHP" expanded="true" />
               </folding>
@@ -42,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../FBPostScheduler/includes/schedule.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="27" column="107" selection-start-line="27" selection-start-column="107" selection-end-line="27" selection-end-column="107" />
+            <state relative-caret-position="532">
+              <caret line="54" column="47" lean-forward="true" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -63,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../FBPostScheduler/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="175">
               <caret line="64" column="85" selection-start-line="64" selection-start-column="85" selection-end-line="64" selection-end-column="85" />
             </state>
           </provider>
@@ -72,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../FBPostScheduler/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+            <state relative-caret-position="481">
+              <caret line="100" column="51" selection-start-line="100" selection-start-column="51" selection-end-line="100" selection-end-column="51" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -111,8 +108,8 @@
         <option value="$PROJECT_DIR$/../FBPostScheduler/css/style.css" />
         <option value="$PROJECT_DIR$/../FBPostScheduler/includes/dashboard.php" />
         <option value="$PROJECT_DIR$/../FBPostScheduler/includes/connection.php" />
-        <option value="$PROJECT_DIR$/../FBPostScheduler/includes/schedule.php" />
         <option value="$PROJECT_DIR$/../FBPostScheduler/index.php" />
+        <option value="$PROJECT_DIR$/../FBPostScheduler/includes/schedule.php" />
         <option value="$PROJECT_DIR$/../FBPostScheduler/js/script.js" />
       </list>
     </option>
@@ -137,6 +134,11 @@
             <path>
               <item name="FBPostSchedular" type="b2602c69:ProjectViewProjectNode" />
               <item name="FBPostScheduler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FBPostSchedular" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FBPostScheduler" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -174,7 +176,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550744360201</updated>
-      <workItem from="1550744361717" duration="15324000" />
+      <workItem from="1550744361717" duration="22951000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1550754188758</created>
@@ -183,14 +185,22 @@
       <option name="project" value="LOCAL" />
       <updated>1550754188758</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding Ajax calls">
+      <created>1550763099645</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550763099645</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15324000" />
+    <option name="totallyTimeSpent" value="22951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14026846" />
@@ -219,33 +229,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Adding Ajax calls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Ajax calls" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../FBPostScheduler/includes/view-all-posts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../FBPostScheduler/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="64" column="85" selection-start-line="64" selection-start-column="85" selection-end-line="64" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../FBPostScheduler/includes/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="81" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="81" />
-          <folding>
-            <element signature="e#10#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../FBPostScheduler/includes/connection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -256,24 +243,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FBPostScheduler/includes/schedule.php">
+    <entry file="file://$PROJECT_DIR$/../FBPostScheduler/includes/view-all-posts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="27" column="107" selection-start-line="27" selection-start-column="107" selection-end-line="27" selection-end-column="107" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FBPostScheduler/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="64" column="85" selection-start-line="64" selection-start-column="85" selection-end-line="64" selection-end-column="85" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../FBPostScheduler/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        <state relative-caret-position="600">
+          <caret line="47" column="81" lean-forward="true" selection-start-line="47" selection-start-column="81" selection-end-line="47" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FBPostScheduler/includes/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <folding>
+            <element signature="e#10#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FBPostScheduler/includes/schedule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="54" column="47" lean-forward="true" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../FBPostScheduler/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        <state relative-caret-position="481">
+          <caret line="100" column="51" selection-start-line="100" selection-start-column="51" selection-end-line="100" selection-end-column="51" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

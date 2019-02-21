@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             e.target.classList.add("active");
 
             //This will request for a new page from the server and will load the html contents to the div with id content
-            var call = function (req, ev) {
-                if(req.readyState == 4 && req.status == 200){
+            var call = function () {
+                if(this.readyState == 4 && this.status == 200){
                     document.getElementById("content").innerHTML = this.responseText;
                 }
             };
@@ -33,14 +33,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
         });
     }
-    ajaxGet()
-
+    // ajaxGet()
     /**
      * This part of code will run when the time has come to post an update on facebook
      */
-    setTimeout(function () {
-        
-    }, )
+    // setTimeout(function () {
+    //
+    // }, )
 });
 
 /**
@@ -53,8 +52,58 @@ function ajaxGet(url, callback){
     xhttp.onreadystatechange = callback;
 
     //opens the url with GET method
-    xhttp.open("GET",url);
+    xhttp.open("GET",url,true);
 
     //sends the ajax request
     xhttp.send();
 }
+
+/**
+ * This function will be called when fb sdk will load.
+ */
+var strArr = [];
+window.fbAsyncInit = function() {
+    FB.init({
+        appId            : '399058003984625',
+        autoLogAppEvents : true,
+        xfbml            : false,
+        version          : 'v3.2'
+    });
+    ajaxGet(baseUrl + "includes/schedule.php?time=true&random_post=true",function () {
+        if(this.readyState == 4 && this.status == 200){
+            var text = this.responseText;
+            var index = 1;
+            var i =0;
+            while(index>0) {
+                index = text.indexOf(":",index);
+                index++;
+                strArr[i++] = text.substring(index, text.indexOf("<EOF>",index));
+            }
+            setTimeout(function () {
+                alert(strArr[2]);
+                if(strArr[1] == "STATUS"){
+                    alert("IN STATUS");
+                    FB.ui({
+                        display: 'popup',
+                        method: 'feed',
+                        name: 'hello',
+                        description: 'World',
+                        caption: 'caption',
+                        message: "'"+strArr[2]+"'",
+                    }, function (response) {
+                        console.log(response);
+                    });
+                }else if(strArr[1] == "PHOTO"){
+                    alert("IN PHOTO");
+                    FB.ui({
+                        display: 'popup',
+                        method: 'feed',
+                        source: baseUrl + strArr[2],
+                    }, function (response) {
+                        console.log(response);
+                    });
+                }
+            }, 5000);
+        }
+    });
+};
