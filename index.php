@@ -23,9 +23,8 @@
                  */
                     include_once ('includes/dashboard.php');
                 ?>
-                <div class="button"><button class="btn schedule-post">Schedule Post</button></div>
-
             </div>
+            <div class="button"><button class="btn schedule-post">Schedule Post</button></div>
         </div>
     </body>
     <script src="js/script.js"></script>
