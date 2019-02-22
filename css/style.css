@@ -31,9 +31,11 @@ body, html{
 #content{
     color: var(--white);
     position: relative;
-    left: 35%;
+    left: 25%;
     text-align: left;
     height: 100%;
+    width: 70%;
+    overflow-y: auto;
 }
 .form-control{
     margin: 10px auto;

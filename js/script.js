@@ -1,6 +1,7 @@
 /*
 * GLOBAL LEVEL SCRIPT
 * */
+var currInterval = null;
 var baseUrl = "http://localhost:8080/FBPostScheduler/";
 document.addEventListener("DOMContentLoaded", function(event) {
     /**
@@ -33,14 +34,59 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
         });
     }
-    // ajaxGet()
-    /**
-     * This part of code will run when the time has come to post an update on facebook
-     */
-    // setTimeout(function () {
-    //
-    // }, )
 });
+
+/**
+ * This function is called when the schedule button is clicked, it makes ajax calls for setting the time interval and opening the share dialog provided by facebook api.
+ */
+function schedule(){
+    //If the interval is already set then clear that interval and set it again.
+    if(currInterval!=null)
+        clearInterval(currInterval);
+
+    //set the session by giving ajax call to the set_time_session so that it will set the session, so it can be retrieved when needed
+    var postAjax = new XMLHttpRequest();
+    postAjax.open("POST", baseUrl + "includes/set_time_session.php");
+    postAjax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    postAjax.send("schedule_btn=true&time_interval="+document.getElementById('time_interval').value);
+
+
+    //This is main logic for opening the dialog provided by the facebook api to share the post as photo or text to the feed.
+    currInterval = setInterval(function () {
+        ajaxGet(baseUrl + "includes/schedule.php?random_post=true",function () {
+        if(this.readyState == 4 && this.status == 200){
+            //receives the response from the server which will the type of post and photo of the post.
+            var text = JSON.parse(this.responseText);
+            alert(text.toString());
+
+            // if the type of post is status then open different dialog.
+            if(text.type == "STATUS"){
+                alert("IN STATUS");
+                FB.ui({
+                    display: 'popup',
+                    method: 'feed',
+                    message: text.post,
+                }, function (response) {
+                    console.log(response);
+                });
+            }
+            // if the type of post is photo then open share dialog.
+            else if(text.type == "PHOTO"){
+                alert("IN PHOTO");
+                FB.ui({
+                    display: 'popup',
+                    method: 'share',
+                    quote: 'Having Fun',
+                    href: text.post,
+                }, function (response) {
+                    console.log(response);
+                });
+            }
+        }
+    });
+        //setting the interval by converting it into hours.
+    }, document.getElementById('time_interval').value*1000*60*60);
+}
 
 /**
  *
@@ -61,49 +107,11 @@ function ajaxGet(url, callback){
 /**
  * This function will be called when fb sdk will load.
  */
-var strArr = [];
 window.fbAsyncInit = function() {
     FB.init({
         appId            : '399058003984625',
         autoLogAppEvents : true,
         xfbml            : false,
         version          : 'v3.2'
-    });
-    ajaxGet(baseUrl + "includes/schedule.php?time=true&random_post=true",function () {
-        if(this.readyState == 4 && this.status == 200){
-            var text = this.responseText;
-            var index = 1;
-            var i =0;
-            while(index>0) {
-                index = text.indexOf(":",index);
-                index++;
-                strArr[i++] = text.substring(index, text.indexOf("<EOF>",index));
-            }
-            setTimeout(function () {
-                alert(strArr[2]);
-                if(strArr[1] == "STATUS"){
-                    alert("IN STATUS");
-                    FB.ui({
-                        display: 'popup',
-                        method: 'feed',
-                        name: 'hello',
-                        description: 'World',
-                        caption: 'caption',
-                        message: "'"+strArr[2]+"'",
-                    }, function (response) {
-                        console.log(response);
-                    });
-                }else if(strArr[1] == "PHOTO"){
-                    alert("IN PHOTO");
-                    FB.ui({
-                        display: 'popup',
-                        method: 'feed',
-                        source: baseUrl + strArr[2],
-                    }, function (response) {
-                        console.log(response);
-                    });
-                }
-            }, 5000);
-        }
     });
 };
