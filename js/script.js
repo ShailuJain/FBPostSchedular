@@ -57,11 +57,9 @@ function schedule(){
         if(this.readyState == 4 && this.status == 200){
             //receives the response from the server which will the type of post and photo of the post.
             var text = JSON.parse(this.responseText);
-            alert(text.toString());
 
             // if the type of post is status then open different dialog.
             if(text.type == "STATUS"){
-                alert("IN STATUS");
                 FB.ui({
                     display: 'popup',
                     method: 'feed',
@@ -72,7 +70,6 @@ function schedule(){
             }
             // if the type of post is photo then open share dialog.
             else if(text.type == "PHOTO"){
-                alert("IN PHOTO");
                 FB.ui({
                     display: 'popup',
                     method: 'share',
