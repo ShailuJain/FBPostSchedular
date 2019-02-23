@@ -1,8 +1,0 @@
-<templateSet group="AngularJS ">
-  <template name="ngb" value="{{$binding$}}$END$" description="A binding in AngularJS" toReformat="true" toShortenFQNames="true">
-    <variable name="binding" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JSP" value="false" />
-    </context>
-  </template>
-</templateSet>
