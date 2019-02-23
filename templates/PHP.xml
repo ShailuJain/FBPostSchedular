@@ -1,5 +1,0 @@
-<templateSet group="PHP">
-  <template name="inc" value="include &quot;$END$&quot;;" description="'include' statement" toReformat="true" toShortenFQNames="true">
-    <context />
-  </template>
-</templateSet>
